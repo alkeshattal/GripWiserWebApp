@@ -1,0 +1,34 @@
+<div class="ocf-tile ocf-tile-name-only"
+     data-ng-class="{
+    'ocf-tile-interactive': interactive || !readonly && !disabled && !secondaryonly,
+    'ocf-tile-error': error,
+    'ocf-tile-readonly': readonly || secondaryonly,
+    'ocf-tile-disabled': disabled,
+    'ocf-tile-unread-notification': unreadTile,
+    'ocf-has-icon': logo && !compact || icon && !compact,
+    'ocf-tile-action': secondaryActionPresent
+    }"
+     data-ng-click="!readonly && !disabled && !secondaryonly && defaultAction()"
+    tabindex="{{aabTileController.tabindex}}"
+   >
+  
+    <!-- the secondaryAction Indicator -->
+    <div data-ng-if="secondaryActionPresent" tabindex="{{aabTileController.tabindexSecondaryAction}}" class="ocf-tile-action-icon" data-ng-click="!readonly && !disabled && secondaryFunction({event: $event})"
+         data-ng-class="showTileIconSeperatorClass" title="{{ secondaryActionDescription}}">
+        <span class="glyphicon" data-ng-class="secondaryActionIndicatorClass" data-testid="half-tile-secondary-indicator">
+            <span class="sr-only">{{ secondaryActionDescription}}</span>
+        </span>
+    </div>
+
+    <div class="ocf-logo-service"
+         data-ng-if="logo && !compact || icon && !compact">
+        <img data-ng-if="logo" data-ng-class="logoClass" ng-src="{{logo}}" alt="{{altTextImg}}" />
+        <img data-ng-if="!logo" data-ng-class="logoClass" alt="{{altTextImg}}"
+             data-ng-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" />
+    </div>
+    <!-- primary info -->
+    <div class="ocf-tile-info">
+        <h5 data-ng-if="aabTileController.primaryInfoProcessed" class="ocf-tile-primary-info">{{aabTileController.primaryInfoProcessed}}</h5>
+        <h5 class="ocf-tile-name">{{name}}</h5>
+    </div>
+</div>

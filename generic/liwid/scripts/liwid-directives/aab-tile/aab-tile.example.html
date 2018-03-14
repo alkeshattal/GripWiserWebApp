@@ -1,0 +1,214 @@
+<div data-ng-controller="aabTileController as aabTileController">
+    <p data-testid="aab-tile-list-selected-display"> Selected action: [{{aabTileController.tileValueList}}]</p>
+    <aab-tiles>
+        <aab-tile ng-repeat="item in aabTileController.list"
+                  data-name="item.name"
+                  data-primary-info="item.primaryInfo"
+                  data-currency="item.currency"
+                  data-additional-info="item.additionalInfo"
+                  data-additional-info-extra="item.additionalInfoExtra"
+                  data-logo="item.logo"
+                  data-icon="{{item.icon}}"
+                  data-display-mode="{{item.display}}"
+                  data-status="{{item.status}}"
+                  data-default-action="aabTileController.actionTileList(item.defaultAction)"
+                  data-default-action-description="{{item.defaultActionDescription}}"
+                  data-merge-tile="{{item.merge}}"
+                  data-alt-text-img="{{'Logo' + $index}}"
+                  data-secondary-action="aabTileController.actionTileList(item.defaultAction)"
+                  data-secondary-action-indicator="{{item.secondaryActionIndicator}}"
+                  data-secondary-action-description="{{item.secondaryActionDescription}}"
+                  data-testid="{{'aab-tile-list0-item' + $index}}">
+        </aab-tile>
+    </aab-tiles>
+</div>
+<div data-ng-controller="aabTileController as aabTileController">
+    <p data-testid="aab-tile-transclude-data-onbutton-click-dispaly"> Selected action
+        [{{aabTileController.amIClicked}}]</p>
+    <aab-tiles>
+        <aab-tile data-ng-repeat="item in aabTileController.disableTileWithExtension"
+                  data-name="item.name"
+                  data-primary-info-icon="item.primaryInfoIcon"
+                  data-additional-info="item.additionalInfo"
+                  data-additional-info-extra="item.additionalInfoExtra"
+                  data-alt-text-img="{{'Logo' + $index}}"
+                  data-logo="item.logo"
+                  data-icon="{{item.icon}}"
+                  data-display-mode="{{item.display}}"
+                  data-status="{{item.status}}"
+                  data-default-action="aabTileController.actionTileWithExtension(item.defaultAction)"
+                  data-is-tile-extended="item.isTileExtended"
+        >
+            <aab-notification-block
+                    data-type="info"
+                    data-text="This is notification block - info notification without close icon which is transcluded in disable tile. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet."
+                    data-hide-close-icon="true"
+                    data-is-notification-transcluded="true">
+                <div>
+                    <aab-button data-attention-type="cta" data-label="Toestemming vernieuwen"
+                                data-action="aabTileController.clickMe()"></aab-button>
+                </div>
+            </aab-notification-block>
+        </aab-tile>
+        <aab-tile data-ng-repeat="item in aabTileController.disableTileWithWarningicon"
+                  data-name="item.name"
+                  data-primary-info-icon="item.primaryInfoIcon"
+                  data-additional-info="item.additionalInfo"
+                  data-additional-info-extra="item.additionalInfoExtra"
+                  data-alt-text-img="{{'Logo' + $index}}"
+                  data-logo="item.logo"
+                  data-icon="{{item.icon}}"
+                  data-display-mode="{{item.display}}"
+                  data-status="{{item.status}}"
+                  data-default-action="aabTileController.actionTileWithExtension(item.defaultAction)"
+                  data-is-tile-extended="item.isTileExtended"
+        >
+            <p>Example of paragraph trancluded in Disable tile</p>
+        </aab-tile>
+    </aab-tiles>
+</div>
+<div data-ng-controller="aabTileController as aabTileController">
+    <p data-testid="aab-tile-default-and-transclude-dispaly"> Selected action:
+        [{{aabTileController.defaultActionOnTile}}] [{{aabTileController.amIClicked}}]</p>
+    <aab-tiles>
+        <aab-tile data-ng-repeat="item in aabTileController.intractiveTilePrimaryinfoIcon"
+                  data-name="item.name"
+                  data-primary-info-icon="item.primaryInfoIcon"
+                  data-additional-info="item.additionalInfo"
+                  data-additional-info-extra="item.additionalInfoExtra"
+                  data-logo="item.logo"
+                  data-icon="{{item.icon}}"
+                  data-display-mode="{{item.display}}"
+                  data-status="{{item.status}}"
+                  data-default-action="aabTileController.actionOnTileWithExtension(item.defaultAction)"
+                  data-is-tile-extended="item.isTileExtended"
+        >
+            <aab-notification-block
+                    data-type="info"
+                    data-text="This is notification block - info notification without close icon which is transcluded in intractive tile. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet."
+                    data-hide-close-icon="true"
+                    data-is-notification-transcluded="true">
+                <div>
+                    <aab-button attention-type="cta" label="Toestemming vernieuwen"
+                                action="aabTileController.clickMe()"></aab-button>
+                </div>
+            </aab-notification-block>
+            <p>Example of paragraph trancluded in intractive tile</p>
+        </aab-tile>
+    </aab-tiles>
+</div>
+<div class="container-fluid" data-ng-controller="aabTileController as aabTileController">
+    <div class="row">
+        <div class="col-sm-6">
+            <p data-testid="aab-tile-list1-selected-display"> Selected action:[{{aabTileController.tileValueList1}}]</p>
+            <aab-tiles>
+                <aab-tile data-ng-repeat="item1 in aabTileController.list1"
+                          data-name="item1.name"
+                          data-primary-info="item1.primaryInfo"
+                          data-currency="item1.currency"
+                          data-additional-info="item1.additionalInfo"
+                          data-additional-info-extra="item1.additionalInfoExtra"
+                          data-alt-text-img="{{'Logo1'}}"
+                          data-logo="item1.logo"
+                          data-icon="{{item1.icon}}"
+                          data-display-mode="{{item1.display}}"
+                          data-status="{{item1.status}}"
+                          data-default-action="aabTileController.actionTileList1(item1.defaultAction)"
+                          data-default-action-description="{{item1.defaultActionDescription}}"
+                          data-secondary-action="aabTileController.actionTileList1(item1.secondaryAction)"
+                          data-secondary-action-indicator="{{item1.secondaryActionIndicator}}"
+                          data-secondary-action-description="{{item1.secondaryActionDescription}}"
+                          data-testid="{{'aab-tile-list1-item' + $index}}">
+                </aab-tile>
+                <aab-tile data-ng-repeat="item1 in aabTileController.defaultActionList"
+                          data-name="item1.name"
+                          data-primary-info="item1.primaryInfo"
+                          data-currency="item1.currency"
+                          data-additional-info="item1.additionalInfo"
+                          data-additional-info-extra="item1.additionalInfoExtra"
+                          data-alt-text-img="{{'Logo2'}}"
+                          data-logo="item1.logo"
+                          data-icon="{{item1.icon}}"
+                          data-display-mode="{{item1.display}}"
+                          data-status="{{item1.status}}"
+                          data-default-action="aabTileController.actionTileList1(item1.defaultAction)"
+                          data-default-action-description="{{item1.defaultActionDescription}}"
+                          data-secondary-action-indicator="{{item1.secondaryActionIndicator}}"
+                          data-secondary-action-description="{{item1.secondaryActionDescription}}"
+                          data-testid="{{'aab-tile-list1-item' + $index}}">
+                </aab-tile>
+                <aab-tile ng-repeat="item1 in aabTileController.compactTileExtraAddInfoSecondaryIcon"
+                          data-name="item1.name"
+                          data-additional-info="item1.additionalInfo"
+                          data-additional-info-extra="item1.additionalInfoExtra"
+                          data-more-info-in-additional-field="item1.moreInfoInAdditionalField"
+                          data-in-line-logo="item1.inLineLogo"
+                          data-in-line-icon="{{item1.inLineIcon}}"
+                          data-display-mode="{{item1.display}}"
+                          data-status="{{item1.status}}"
+                          data-default-action="aabTileController.actionTileList1(item1.defaultAction)"
+                          data-default-action-description="{{item1.defaultActionDescription}}"
+                          data-secondary-action-indicator="{{item1.secondaryActionIndicator}}"
+                          data-secondary-action-description="{{item1.secondaryActionDescription}}"
+                          data-testid="{{'aab-compact-tile-item' + $index}}">
+                </aab-tile>
+            </aab-tiles>
+        </div>
+    </div>
+    <h2>(Beheer tile)Tile with name only or name with iocn and Secondary Action</h2>
+    <div class="row">
+        <div class="col-sm-12">
+            <p data-testid="aab-half-tile-secondary-action-selected-display"> Selected action:
+                [{{aabTileController.halfTileValueWithSecondaryAction}}]</p>
+            <aab-tiles>
+                <div class="row">
+                    <div class="col-sm-6" data-ng-repeat="item in aabTileController.halfTileListSecondaryAction">
+                        <aab-tile
+                                data-name="item.name"
+                                data-primary-info="item.primaryInfo"
+                                data-currency="item.currency"
+                                data-additional-info="item.additionalInfo"
+                                data-additional-info-extra="item.additionalInfoExtra"
+                                data-alt-text-img="{{'Logo' + $index}}"
+                                data-logo="item.logo"
+                                data-icon="{{item.icon}}"
+                                data-display-mode="nameOnly"
+                                data-status="{{item.status}}"
+                                data-default-action="aabTileController.actionHalfTileSecondaryAction(item.defaultAction)"
+                                data-secondary-action-indicator="{{item.secondaryActionIndicator}}"
+                                data-secondary-action="aabTileController.actionHalfTileSecondaryAction(item.secondaryAction)">
+                        </aab-tile>
+                    </div>
+                </div>
+            </aab-tiles>
+        </div>
+    </div>
+    <h2>Beheer tile in a grid, order left to right</h2>
+    <div class="row">
+        <div class="col-sm-12">
+            <p data-testid="aab-half-tile-list1-selected-display"> Selected action:
+                [{{aabTileController.halfTileValueList1}}]</p>
+            <aab-tiles>
+                <div class="row">
+                    <div class="col-sm-6" data-ng-repeat="item1 in aabTileController.halfTileList">
+                        <aab-tile
+                                data-name="item1.name"
+                                data-primary-info="item1.primaryInfo"
+                                data-currency="item1.currency"
+                                data-additional-info="item1.additionalInfo"
+                                data-additional-info-extra="item1.additionalInfoExtra"
+                                data-logo="item1.logo"
+                                data-alt-text-img="{{'Logo' + $index}}"
+                                data-icon="{{item1.icon}}"
+                                data-display-mode="nameOnly"
+                                data-status="{{item1.status}}"
+                                data-default-action="aabTileController.actionHalfTileList(item1.defaultAction)"
+                                data-secondary-action-indicator="{{item1.secondaryActionIndicator}}"
+                                data-testid="{{'aab-tile-half-list-item' + $index}}">
+                        </aab-tile>
+                    </div>
+                </div>
+            </aab-tiles>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+{
+  "vmcList":[
+    {
+      "cin":"ABCD",
+      "bcNumber":"1",
+      "status":"Active",
+      "riskProfile":"Aggressive",
+      "serviceConcept":"",
+      "percChange":0,
+      "calculated":0,
+      "activationTimeStamp":""
+    },
+    {
+      "cin":"ABCD",
+      "bcNumber":"1",
+      "status":"Active",
+      "riskProfile":"Aggressive",
+      "serviceConcept":"",
+      "percChange":0,
+      "calculated":0,
+      "activationTimeStamp":""
+    },
+    {
+      "cin":"ABCD",
+      "bcNumber":"1",
+      "status":"Active",
+      "riskProfile":"Aggressive",
+      "serviceConcept":"",
+      "percChange":0,
+      "calculated":0,
+      "activationTimeStamp":""
+    }
+  ]
+}

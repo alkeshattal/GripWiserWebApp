@@ -1,0 +1,181 @@
+<div data-ng-controller="aabAccordionTwoController as aabAccordionTwoCtrl">
+    <section>
+        <h3>Chevron Left</h3>
+        <label>
+            Open more accordions together: <input type="checkbox" ng-model="oneAtATimeSection1">
+        </label>
+        <uib-accordion data-close-others="!oneAtATimeSection1">
+            <aab-accordion-two>
+                <accordion-left-icon-area><span class="glyphicon ocf-icon-single-alt"></span></accordion-left-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                    <p>Transcluded button clicked: [{{aabAccordionTwoCtrl.triggerdTranscludedClick}}]</p>
+                    <aab-button data-attention-type="primary" data-label="primary button" data-action="aabAccordionTwoCtrl.transcludedBtnFn()"></aab-button>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two>
+                <accordion-left-area><h4>Area Left</h4></accordion-left-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                    <p>Transcluded button clicked: [{{aabAccordionTwoCtrl.triggerdTranscludedClick}}]</p>
+                    <aab-button data-attention-type="primary" data-label="primary button" data-action="aabAccordionTwoCtrl.transcludedBtnFn()"></aab-button>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two>
+                <accordion-left-icon-area><span class="glyphicon ocf-icon-single-alt"></span></accordion-left-icon-area>
+                <accordion-left-area><h4>Icon Left - Area Left</h4></accordion-left-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two data-is-accordion-open="true">
+                <accordion-left-icon-area><span class="glyphicon ocf-icon-single-alt"></span></accordion-left-icon-area>
+                <accordion-left-area><h4>Icon Left - Area left - Area Right and open on page load</h4></accordion-left-area>
+                <accordion-right-area><strong>Hello World!</strong></accordion-right-area>
+                <accordion-expandable-area>
+                    <p>I am open at page load because of the nice attribute added in this component!</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two>
+                <accordion-left-icon-area><span class="glyphicon ocf-icon-single-alt"></span></accordion-left-icon-area>
+                <accordion-left-area><h4>Icon Left - Area left - Area Right - Icon Right</h4></accordion-left-area>
+                <accordion-right-area><strong>Hello World!</strong></accordion-right-area>
+                <accordion-right-icon-area><span class="glyphicon ocf-icon-succes"></span></accordion-right-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two>
+                <accordion-left-area><h4>Area left - Area Right - Icon Right</h4></accordion-left-area>
+                <accordion-right-area><strong>Hello World!</strong></accordion-right-area>
+                <accordion-right-icon-area><span class="glyphicon ocf-icon-succes"></span></accordion-right-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two>
+                <accordion-right-area><strong>Area Right - Icon Right</strong></accordion-right-area>
+                <accordion-right-icon-area><span class="glyphicon ocf-icon-succes"></span></accordion-right-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two>
+                <accordion-right-icon-area><span class="glyphicon ocf-icon-succes"></span></accordion-right-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two>
+                <accordion-left-icon-area><span class="glyphicon ocf-icon-single-alt"></span></accordion-left-icon-area>
+                <accordion-right-icon-area><span class="glyphicon ocf-icon-succes"></span></accordion-right-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two>
+                <accordion-left-area><h4>Area Left - Icon Right</h4></accordion-left-area>
+                <accordion-right-icon-area><span class="glyphicon ocf-icon-succes"></span></accordion-right-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two>
+                <accordion-left-area><h4>Area left - Area Right</h4></accordion-left-area>
+                <accordion-right-area><strong>Hello World!</strong></accordion-right-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+        </uib-accordion>
+    </section>
+
+    <section>
+        <h3>Chevron Right</h3>
+        <label>
+            Open more accordions together: <input type="checkbox" ng-model="oneAtATimeSection2">
+        </label>
+        <uib-accordion data-close-others="!oneAtATimeSection2">
+            <aab-accordion-two data-is-chevron-right="true">
+                <accordion-left-icon-area><span class="glyphicon ocf-icon-single-alt"></span></accordion-left-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two data-is-chevron-right="true">
+                <accordion-left-area><h4>Area Left</h4></accordion-left-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                    <p>Transcluded button clicked: [{{aabAccordionTwoCtrl.triggerdTranscludedClick}}]</p>
+                    <aab-button data-attention-type="primary" data-label="primary button" data-action="aabAccordionTwoCtrl.transcludedBtnFn()"></aab-button>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two data-is-chevron-right="true">
+                <accordion-left-icon-area><span class="glyphicon ocf-icon-single-alt"></span></accordion-left-icon-area>
+                <accordion-left-area><h4>Icon Left - Area Left</h4></accordion-left-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two data-is-chevron-right="true">
+                <accordion-left-icon-area><span class="glyphicon ocf-icon-single-alt"></span></accordion-left-icon-area>
+                <accordion-left-area><h4>Icon Left - Area left - Area Right</h4></accordion-left-area>
+                <accordion-right-area><strong>Hello World!</strong></accordion-right-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two data-is-chevron-right="true">
+                <accordion-left-icon-area><span class="glyphicon ocf-icon-single-alt"></span></accordion-left-icon-area>
+                <accordion-left-area><h4>Icon Left - Area left - Area Right - Icon Right</h4></accordion-left-area>
+                <accordion-right-area><strong>Hello World!</strong></accordion-right-area>
+                <accordion-right-icon-area><span class="glyphicon ocf-icon-succes"></span></accordion-right-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two data-is-chevron-right="true">
+                <accordion-left-area><h4>Area left - Area Right - Icon Right</h4></accordion-left-area>
+                <accordion-right-area><strong>Hello World!</strong></accordion-right-area>
+                <accordion-right-icon-area><span class="glyphicon ocf-icon-succes"></span></accordion-right-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two data-is-chevron-right="true">
+                <accordion-right-area><strong>Area Right - Icon Right</strong></accordion-right-area>
+                <accordion-right-icon-area><span class="glyphicon ocf-icon-succes"></span></accordion-right-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two data-is-chevron-right="true">
+                <accordion-right-icon-area><span class="glyphicon ocf-icon-succes"></span></accordion-right-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two data-is-chevron-right="true">
+                <accordion-left-icon-area><span class="glyphicon ocf-icon-single-alt"></span></accordion-left-icon-area>
+                <accordion-right-icon-area><span class="glyphicon ocf-icon-succes"></span></accordion-right-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two data-is-chevron-right="true">
+                <accordion-left-area><h4>Area Left - Icon Right</h4></accordion-left-area>
+                <accordion-right-icon-area><span class="glyphicon ocf-icon-succes"></span></accordion-right-icon-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+            <aab-accordion-two data-is-chevron-right="true">
+                <accordion-left-area><h4>Area left - Area Right</h4></accordion-left-area>
+                <accordion-right-area><strong>Hello World!</strong></accordion-right-area>
+                <accordion-expandable-area>
+                    <p>With a nice expandable transcluded area. You can insert whatever you want</p>
+                </accordion-expandable-area>
+            </aab-accordion-two>
+        </uib-accordion>
+    </section>
+</div>

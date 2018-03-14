@@ -1,0 +1,14 @@
+<div class="ocf-tile ocf-tile-interactive">
+    <div class="col-sm-4">
+        <input type="checkbox" class="checkbox" name="selectAllVmc" ng-model="selectAllVmc">
+        <h3 style="margin-bottom:0">{{vmc.cin}}</h3>
+        <div class="data">{{details.company}}</div>
+    </div>
+    <div class="col-sm-8 form-group form-group-first" ng-class="{'has-warning has-feedback' : searchform.fondscode.$error.pattern || searchform.fondscode.$error.maxlength}">
+        <div class="col-sm-3"><span translate>LABEL_FONDSCODE</span></div>
+        <div class="col-sm-9">{{details.fondscode}}</div>
+
+        <div class="col-sm-3"><span translate>LABEL_ISIN</span></div>
+        <div class="col-sm-9">{{details.isin}}</div>
+    </div>
+</div>

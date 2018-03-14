@@ -1,0 +1,72 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title"><span data-translate>LABEL_OVERVIEW_SCREEN_NAME</span></h2>
+    </div>
+    <div class="panel-body" id="screen-body" data-ng-cloak>
+        <div id="http-error-block"></div>
+        <div id="notification-block"></div>
+
+        <div>
+            <input type="text" ng-model="modelPortfolio">
+        </div>
+
+        <div class="well well-sm table-responsive">
+            <div data-ng-repeat="portfolio in modelPortfolioList | filter:{name:modelPortfolio}">
+
+                <!--&lt;!&ndash;<aab-accordion-two>
+                     <accordion-left-area>{{portfolio.name}}</accordion-left-area>
+
+                     <accordion-expandable-area>Hola</accordion-expandable-area>
+                 </aab-accordion-two>&ndash;&gt;
+
+
+               &lt;!&ndash;  <uib-accordion close-others="oneAtATime">
+                     <div uib-accordion-group class="panel-default">
+                         <uib-accordion-heading>
+                             {{portfolio.name}}
+                         </uib-accordion-heading>
+                         This is just some content to illustrate fancy headings.
+                     </div>
+                 </uib-accordion>&ndash;&gt;
+                 <div class="aab-accordion-two-wrapper">
+                     <script type="text/ng-template" id="group-template.html">
+                         <div class="ocf-accordion-two-heading-wrapper"  uib-accordion-transclude="heading" data-ng-click="toggleOpen()" data-ng-keyup="$event.keyCode === 13 && toggleOpen()" tabindex="0">
+                             <div uib-accordion-header class="ocf-accordion-two-heading"></div>
+                         </div>
+                         <div class="panel-collapse collapse" uib-collapse="!isOpen">
+                             <div class="panel-body" ng-transclude></div>
+                         </div>
+                     </script>
+
+                 <uib-accordion close-others="oneAtATime">
+                     <div uib-accordion-group class="aab-accordion-two">
+                         <uib-accordion-heading>
+                             <div class="ocf-accordion-wrapper-left-right">
+                                 <div data-ng-if="isLeftAreaTranscluded" class="ocf-accordion-two-left-area" data-ng-transclude="accordionLeftArea"></div>
+                             </div>
+                             <div data-ng-if="isChevronRight === 'true'" class="ocf-accordion-two-chevron-right-area">
+                                 <span class="glyphicon" data-ng-class="isAccordionOpen ? 'ocf-icon-chevron-up' : 'ocf-icon-chevron-down'"></span>
+                             </div>
+                         </uib-accordion-heading>
+                         This is just some content to illustrate fancy headings.
+                     </div>
+                 </uib-accordion>
+                 </div>-->
+
+                <uib-accordion close-others="oneAtATime">
+                    <div uib-accordion-group class="panel-default" is-open="status.open">
+                        <uib-accordion-heading>
+                            {{portfolio.name}}
+                        </uib-accordion-heading>
+                        <div>
+                            <ng-include src="'./app/modules/model-portfolio/template.html'"></ng-include>
+                        </div>
+                    </div>
+                </uib-accordion>
+
+
+            </div>
+
+        </div>
+    </div><!-- panel-body -->
+</div>

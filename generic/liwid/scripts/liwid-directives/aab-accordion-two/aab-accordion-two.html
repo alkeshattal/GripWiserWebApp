@@ -1,0 +1,36 @@
+<!--
+  We need to transclude trough a custom template to remove ui bootstraps default h4 headings and that's needed
+  because we need multiple transclusion in the whole heading / description area.
+  -->
+<div class="aab-accordion-two-wrapper">
+    <script type="text/ng-template" id="group-template.html">
+        <div class="ocf-accordion-two-heading-wrapper"  uib-accordion-transclude="heading" data-ng-click="toggleOpen()" data-ng-keyup="$event.keyCode === 13 && toggleOpen()" tabindex="0">
+            <div uib-accordion-header class="ocf-accordion-two-heading"></div>
+        </div>
+        <div class="panel-collapse collapse" uib-collapse="!isOpen">
+            <div class="panel-body" ng-transclude></div>
+        </div>
+    </script>
+
+    <div uib-accordion-group class="aab-accordion-two" data-is-open="isAccordionOpen" data-template-url="group-template.html">
+        <uib-accordion-heading>
+            <!-- hard coded chevron for expanding functionality -->
+            <div data-ng-if="isChevronRight !== 'true'" class="ocf-accordion-two-chevron-left-area">
+                <span class="glyphicon" data-ng-class="isAccordionOpen ? 'ocf-icon-chevron-down' : 'ocf-icon-chevron-right'"></span>
+            </div>
+            <div data-ng-if="isIconLeftTranscluded" data-ng-transclude="accordionLeftIconArea" class="ocf-accordion-two-icon-left-area"></div>
+
+            <div class="ocf-accordion-wrapper-left-right">
+                <div data-ng-if="isLeftAreaTranscluded" class="accordion-two-left-area" data-ng-transclude="accordionLeftArea"></div>
+                <div data-ng-if="isRightAreaTranscluded" class="ocf-accordion-two-right-area" data-ng-transclude="accordionRightArea"></div>
+            </div>
+
+            <div data-ng-if="isIconRightTranscluded" class="ocf-accordion-two-right-icon-area" data-ng-transclude="accordionRightIconArea"></div>
+            <!-- hard coded chevron for expanding functionality -->
+            <div data-ng-if="isChevronRight === 'true'" class="ocf-accordion-two-chevron-right-area">
+                <span class="glyphicon" data-ng-class="isAccordionOpen ? 'ocf-icon-chevron-up' : 'ocf-icon-chevron-down'"></span>
+            </div>
+        </uib-accordion-heading>
+        <div data-ng-transclude="accordionExpandableArea" tabindex="0"></div>
+    </div>
+</div>

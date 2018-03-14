@@ -1,0 +1,57 @@
+<!--random ID is needed so angular knows which element to colapse-->
+
+<div class="ocf-tile ocf-tile-interactive ocf-tile-expanded"
+     tabindex="0"
+     data-ng-class="{
+        'ocf-tile-expanded-open': !isCollapsed,
+        'ocf-tile-checkbox': isSelectable,
+        'ocf-tile-action': hasSecondaryAction,
+        'ocf-tile-compact': compact,
+        'ocf-tile-oneline': oneLine,
+        'ocf-tile-notification': marked === 'notification',
+        'ocf-tile-notification ocf-tile-notification-alert': marked === 'alert',
+        'ocf-tile-error': error,
+        'half-gutter': halfGutter
+     }"
+     data-ng-click="tileAction()"
+     id="{{$id}}" aria-label="{{tileLabel}}" data-testid="aab-tile-expand">
+
+    <div data-ng-show="isSelectable" class="checkbox" data-ng-click="checkboxAction();$event.stopPropagation();">
+        <input type="checkbox" data-ng-attr-id="{{checkboxName}}" data-testid="{{checkboxName}}" data-ng-model="isSelected" />
+        <label data-ng-attr-for="{{checkboxName}}">
+            <span class="sr-only">{{label}}</span >
+        </label>
+    </div>
+    <!-- the secondaryAction Indicator -->
+    <div data-ng-if="hasSecondaryAction" class="ocf-tile-action-icon" data-ng-click="secondaryAction({event: $event});$event.stopPropagation();" data-ng-class="showTileIconSeperatorClass">
+        <span class="glyphicon" data-ng-class="secondaryActionIndicatorClass" data-testid="secondary-indicator{{$parent.$parent.$index}}">
+            <span class="sr-only">{{ secondaryActionDescription}}</span>
+        </span>
+    </div>
+    <div data-ng-if="logo || logoClasses" class="ocf-logo-service" data-ng-class="{'hidden-print':hiddenPrint.logo}">
+        <img data-ng-src="{{logo}}" alt="{{logoAlternative}}" data-ng-class="logoClasses"/>
+    </div>
+    <div class="ocf-tile-info">
+        <h5 class="ocf-tile-primary-info" data-ng-class="primaryInfoClasses">
+            <div data-ng-class="{'hidden-print':hiddenPrint.primaryInfo}">
+                <span class="sr-only">{{currency}}</span>{{primaryInfo}}
+            </div>
+        </h5>
+        <h5 class="ocf-tile-name" data-ng-class="tileNameClasses">{{tileName}}</h5>
+    </div>
+    <p data-ng-if="additionalInfo" class="ocf-tile-additional-info">
+        {{additionalInfo}}
+        <span data-ng-if="additionalInfoExtra && !compact && !oneLine" ><br />{{additionalInfoExtra}}</span>
+        <span data-ng-if="additionalInfoExtra && compact && !oneLine"  class="ocf-tile-additional-info-separator">|</span>
+        <span data-ng-if="additionalInfoExtra && compact && !oneLine">{{additionalInfoExtra}}</span>
+    </p>
+    <div class="pull-right" data-ng-class="icon.className">
+        <span class="sr-only" data-ng-bind="icon.label"></span>
+        <span data-ng-class="icon.countClassName" data-ng-bind="icon.count"></span>
+    </div>
+
+    <div class="clearfix"></div>
+    <!--because of the padding we need to ignore the clickevent in the transcluded area-->
+    <div data-ng-click="ignoreClick($event)" class="ocf-tile-expandable-container" data-ng-if="!isCollapsed" data-ng-transclude >
+    </div>
+</div>

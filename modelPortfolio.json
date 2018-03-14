@@ -1,0 +1,136 @@
+{
+  "modelportfolio": [
+    {
+      "name": "Income Mandate",
+      "servicecnceptId": 1234,
+      "selectionDate": "31-10-2017",
+      "assetClasses": [
+        {
+          "name": "Equity",
+          "assetPercDist": [
+            0,
+            3.6,
+            4.5,
+            1.5,
+            6,
+            0.99
+          ],
+          "categories": [
+            {
+              "assetClasslevel2name": "Equity Developed Markets",
+              "totalPercDist": [
+                0,
+                2.4,
+                3.0,
+                1.0,
+                4,
+                0.66
+              ],
+              "instruments": [
+                {
+                  "instrumentName": "Amundi Funds",
+                  "instrumentCode": "020766",
+                  "instrumentISIN": "LU116520766",
+                  "percDist": [
+                    0,
+                    1.2,
+                    1.5,
+                    0.5,
+                    2,
+                    0.33
+                  ]
+                },
+                {
+                  "instrumentName": "Kempen Global High",
+                  "instrumentCode": "755855",
+                  "instrumentISIN": "NL0011755855",
+                  "percDist": [
+                    0,
+                    1.2,
+                    1.5,
+                    0.5,
+                    2,
+                    0.33
+                  ]
+                }
+              ]
+            },
+            {
+              "assetClasslevel2name": "Equity Emerging Markets",
+              "totalPercDist": [
+                0,
+                1.2,
+                1.5,
+                0.5,
+                2,
+                0.33
+              ],
+              "instruments": [
+                {
+                  "instrumentName": "Robeco EM Conservative",
+                  "instrumentCode": "910217",
+                  "instrumentISIN": "LU0792910217",
+                  "percDist": [
+                    0,
+                    1.2,
+                    1.5,
+                    0.5,
+                    2,
+                    0.33
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Income Mandate2",
+      "servicecnceptId": 5678,
+      "selectionDate": "31-10-2017",
+
+      "assetClasses": [
+        {
+          "name": "Equity",
+          "assetPercDist": [
+            0,
+            1.2,
+            1.5,
+            0.5,
+            2,
+            0.33
+          ],
+          "categories": [
+            {
+              "assetClasslevel2name": "Equity Developed Markets",
+              "totalPercDist": [
+                0,
+                1.2,
+                1.5,
+                0.5,
+                2,
+                0.33
+              ],
+              "instruments": [
+                {
+                  "instrumentName": "Amundi Funds",
+                  "instrumentCode": "020766",
+                  "instrumentISIN": "LU116520766",
+                  "percDist": [
+                    0,
+                    1.2,
+                    1.5,
+                    0.5,
+                    2,
+                    0.33
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+<div data-ng-controller="aabTileExpandableController as aabTileExpandableController">
+    <h1 data-testid="aab-tile-expand-display">Is the button clicked? {{aabTileExpandableController.amIClicked}}</h1>
+
+    <aab-tiles>
+        <aab-tile-expandable
+                data-primary-info="aabTileExpandableController.expandableTile.primaryInfo"
+                data-tile-name="{{aabTileExpandableController.expandableTile.name}}"
+                data-additional-info="aabTileExpandableController.expandableTile.additionalInfo"
+                data-additional-info-extra="aabTileExpandableController.expandableTile.additionalInfoExtra"
+                data-logo="aabTileExpandableController.expandableTile.logo"
+                data-logo-alternative="{{aabTileExpandableController.expandableTile.name}}"
+                data-tile-label="{{aabTileExpandableController.expandableTile.name}}"
+                data-display-mode="compact"
+                data-is-collapsed="aabTileExpandableController.expandId !== 'expandableTileDefault'"
+                data-tile-action="aabTileExpandableController.tileClicked('expandableTileDefault')"
+                data-testid="expandableTileDefault">
+            <p>This is all kind of information we can put in the tile Lets do a list!</p>
+            <ul>
+                <li>What do you think of this list item?</li>
+                <li>or this one</li>
+                <li>maybe this one is better?</li>
+            </ul>
+            <p>We can allso do some buttons how do you like that hea?</p>
+            <aab-button class="btn-sm" label="This is a small button" action="aabTileExpandableController.clickMe()"></aab-button>
+        </aab-tile-expandable>
+        <aab-tile-expandable
+                data-primary-info="aabTileExpandableController.selectableTile.primaryInfo"
+                data-tile-name="{{aabTileExpandableController.selectableTile.name}}"
+                data-additional-info="aabTileExpandableController.selectableTile.additionalInfo"
+                data-additional-info-extra="aabTileExpandableController.selectableTile.additionalInfoExtra"
+                data-tile-label="{{aabTileExpandableController.selectableTile.primaryInfo}}"
+                data-is-selectable="aabTileExpandableController.selectableTile.isSelectable"
+                data-is-selected="aabTileExpandableController.selectableTile.isSelected"
+                data-checkbox-action="aabTileExpandableController.checkBoxSelect(aabTileExpandableController.selectableTile)"
+                data-checkbox-name="{{aabTileExpandableController.selectableTile.name}}"
+                data-label="{{aabTileExpandableController.selectableTile.name}}"
+                data-is-collapsed="aabTileExpandableController.expandId !== 'expandableTileSelectable'"
+                data-tile-action="aabTileExpandableController.tileClicked('expandableTileSelectable')"
+                data-icon = "aabTileExpandableController.iconObject"
+                data-testid="expandableTileSelectable">
+            <p>This is a selectable tile without secondary action</p>
+            <ul>
+                <li>What do you think of this list item?</li>
+                <li>or this one</li>
+                <li>maybe this one is better?</li>
+            </ul>
+            <p>We can allso do some buttons how do you like that hea?</p>
+            <aab-button class="btn-sm" label="This is a small button" action="aabTileExpandableController.clickMe()"></aab-button>
+        </aab-tile-expandable>
+        <aab-tile-expandable
+                data-primary-info="aabTileExpandableController.markedTile.primaryInfo"
+                data-tile-name="{{aabTileExpandableController.markedTile.name}}"
+                data-additional-info="aabTileExpandableController.markedTile.additionalInfo"
+                data-additional-info-extra="aabTileExpandableController.markedTile.additionalInfoExtra"
+                data-tile-label="{{aabTileExpandableController.markedTile.primaryInfo}}"
+                data-is-selectable="aabTileExpandableController.markedTile.isSelectable"
+                data-is-selected="aabTileExpandableController.markedTile.isSelected"
+                data-checkbox-action="aabTileExpandableController.checkBoxSelect(aabTileExpandableController.markedTile)"
+                data-checkbox-name="{{aabTileExpandableController.markedTile.name}}"
+                data-label="{{aabTileExpandableController.markedTile.name}}"
+                data-is-collapsed="aabTileExpandableController.expandId !== 'expandableTileMarked'"
+                data-tile-action="aabTileExpandableController.tileClicked('expandableTileMarked')"
+                data-icon = "aabTileExpandableController.iconObject"
+                data-marked = "aabTileExpandableController.markedTile.marked"
+                data-testid="expandableTileMarked">
+            <p>This is a selectable tile without secondary action</p>
+            <ul>
+                <li>What do you think of this list item?</li>
+                <li>or this one</li>
+                <li>maybe this one is better?</li>
+            </ul>
+            <p>We can allso do some buttons how do you like that hea?</p>
+            <aab-button class="btn-sm" label="This is a small button" data-action="aabTileExpandableController.clickMe()"></aab-button>
+        </aab-tile-expandable>
+    </aab-tiles>
+</div>

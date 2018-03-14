@@ -1,0 +1,67 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title"><span data-translate>LABEL_OVERVIEW_SCREEN_NAME</span></h2>
+    </div>
+    <div class="panel-body" id="screen-body" data-ng-cloak>
+        <div id="http-error-block"></div>
+        <div id="notification-block"></div>
+        <div id ="searchblock">
+            <form class="form-horizontal ng-pristine ng-valid" name="searchform" ng-cloak>
+                <fieldset>
+                    <legend translate>LABEL_SEARCH</legend>
+                    <div class="col-xs-10 form-group form-group-first" ng-class="{'has-warning has-feedback' : searchform.investmentAccountNumber.$error.pattern || searchform.investmentAccountNumber.$error.maxlength}">
+                        <label for="DEPOT_NUMBER"  class="col-sm-3" translate>LABEL_SECURITIES_ACCOUNT</label>
+                        <div class="col-sm-4 col-md-3">
+                            <div class="input-group">
+                                <input type="text" ng-model="order.investmentAccountNumber" name="investmentAccountNumber" class="form-control" ng-pattern="/^(\d+|\d{1,3}(\.\d{2})*?(\.\d{3}))$/" ng-maxlength="checkMaxlength('investmentAccountNumber')" ng-required="!order.businessContactNumber" ng-disabled="order.businessContactNumber" maxLength="{{maxLengthInvstAcntNum}}" ng-change="searchCriteriaChanged()"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-10 form-group form-group-first" ng-class="{'has-warning has-feedback' : searchform.BC_NUMBER.$error.pattern || searchform.BC_NUMBER.$error.maxlength}">
+                        <label for="BC_NUMBER" class="col-sm-3" translate>LABEL_BC_NUMBER</label>
+                        <div class="col-sm-4 col-md-3">
+                            <div class="input-group">
+                                <input type="text" ng-model="order.businessContactNumber" name="BC_NUMBER" class="form-control" ng-pattern="/^(\d+|\d{1,3}(\.\d{2})*?(\.\d{3}))$/" ng-maxlength="checkMaxlength('BC_NUMBER')" ng-required="!order.investmentAccountNumber" ng-disabled="order.investmentAccountNumber" maxLength="{{maxLengthBCNum}}" ng-change="searchCriteriaChanged()"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-5 form-group form-group-first form-group-last">
+                        <button type="submit" class="btn btn-primary" ng-click="searchOrder()" ng-disabled="(!order.businessContactNumber && !order.investmentAccountNumber) || (order.businessContactNumber && order.investmentAccountNumber) ">
+                            <span translate>LABEL_SEARCH</span>
+                        </button>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-sm-12">
+            <legend style="margin-left: 0;width: 100%;"><span translate>LABEL_OTHER_USERS</span></legend>
+            <div>
+                <form class="form-horizontal ng-pristine ng-valid" name="vmcform" ng-cloak>
+                    <fieldset>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label for="selectAllVmc">Select All VMC</label>
+                                <input type="checkbox" class="checkbox" name="selectAllVmc" ng-model="selectAllVmc">
+                                <div class="col-mdoffset-4 col-md-1">
+                                    <span class="glyphicon ocf-icon-rejected" ng-click=""holdSelectedVmc()></span>
+                                </div>
+                                <div class="col-md-1">
+                                    <span class="glyphicon glyphicon-trash" ng-click=""removeSelectedVmc()></span>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+            <div ng-repeat="vmc in vmcList">
+                <ng-include src="'./app/modules/vmc-overview/template.html'"></ng-include>
+            </div>
+        </div>
+    </div><!-- panel-body -->
+</div>

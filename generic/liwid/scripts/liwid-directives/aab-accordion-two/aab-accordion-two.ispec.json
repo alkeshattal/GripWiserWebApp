@@ -1,0 +1,5 @@
+{
+  	"componentControllerRequire": ["component/ui/aab-accordion-two/aab-accordion-two.example", "component/ui/aab-accordion-two/aab-accordion-two"],
+  	"componentControllerAngularDependencies": ["ui.aabAccordionTwo"],
+  	"componentControllerName": "aabAccordionTwoController"
+}

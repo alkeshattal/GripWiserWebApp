@@ -1,0 +1,61 @@
+<div class="ocf-tile"
+    data-ng-class="{
+    'ocf-tile-interactive': interactive || !readonly && !disabled && !secondaryonly,
+    'ocf-tile-error': error,
+    'ocf-tile-readonly': readonly || secondaryonly,
+    'ocf-tile-disabled': disabled,
+    'ocf-tile-compact': compact,
+    'ocf-tile-dropdown-unselected': unselected,
+    'ocf-tile-name-only': nameOnly,
+    'ocf-tile-action': secondaryActionPresent,
+    'ocf-tile-oneline': oneLine,
+    'ocf-tile-merged': mergeTile && readonly,
+    'ocf-tile-unread-notification': unreadTile
+    
+    }"
+   data-ng-click="!readonly && !disabled && !secondaryonly && defaultAction()"
+   title="{{ defaultActionDescription}}"
+    tabindex="{{aabTileController.tabindex}}"
+   >
+    <!-- the secondaryAction Indicator -->
+    <div data-ng-if="secondaryActionPresent" tabindex="{{aabTileController.tabindexSecondaryAction}}" class="ocf-tile-action-icon" data-ng-click="!readonly && !disabled && secondaryFunction({event: $event})"
+        data-ng-class="showTileIconSeperatorClass" title="{{ secondaryActionDescription}}">
+        <span class="glyphicon" data-ng-class="secondaryActionIndicatorClass" data-testid="secondary-indicator{{$parent.$parent.$index}}">
+            <span class="sr-only">{{ secondaryActionDescription}}</span>
+        </span>
+    </div>
+    <div class="ocf-logo-service" 
+        data-ng-if="logo && !compact || icon && !compact">
+        <img data-ng-if="logo" data-ng-class="logoClass" data-ng-src="{{logo}}" alt="{{altTextImg}}" />
+        <img data-ng-if="!logo" data-ng-class="logoClass" alt="{{altTextImg}}"
+            data-ng-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" />
+    </div>
+    <div class="ocf-in-line-logo-service" 
+        data-ng-if="inLineLogo || inLineIcon">
+        <img data-ng-if="inLineLogo" data-ng-class="inLineLogoClass" data-ng-src="{{inLineLogo}}" alt="{{altTextImg}}" />
+        <img data-ng-if="!inLineLogo" data-ng-class="inLineLogoClass" alt="{{altTextImg}}"
+            data-ng-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=" />
+    </div>
+    <!-- primary info -->
+    <div class="ocf-tile-info" >
+        <span data-ng-if="primaryInfoIcon" data-ng-attr-class="{{primaryInfoIconClass}}"></span>
+        <h5 data-ng-if="!nameOnly" class="ocf-tile-primary-info">{{primaryInfoProcessed}}</h5>
+        <h5 class="ocf-tile-name" data-testid="primary-name-text-{{$parent.$index}}">{{name}}</h5>
+    </div>
+    <!-- additional info -->
+    <p class="ocf-tile-additional-info"
+        data-ng-if="additionalInfo && !nameOnly && !compact">
+        {{additionalInfo}}
+        <span data-ng-if="additionalInfoExtra && !oneLine" ><br />{{additionalInfoExtra}}</span>
+    </p>
+    <p class="ocf-tile-additional-info"
+        data-ng-if="additionalInfo && !nameOnly && compact">
+        {{additionalInfoExtra}}
+        <span data-ng-if="additionalInfoExtra && !oneLine"  class="ocf-tile-additional-info-separator">|</span>
+        <span data-ng-if="additionalInfoExtra && !oneLine">{{additionalInfo}}</span>
+        <span data-ng-if="moreInfoInAdditionalField && !oneLine"  class="ocf-tile-additional-info-separator">|</span>
+        <span data-ng-if="moreInfoInAdditionalField && !oneLine">{{moreInfoInAdditionalField}}</span>
+    </p>
+    <div data-ng-if="isTileExtended" class="ocf-tile-extended-area" data-ng-click="ignoreClick($event)" data-ng-transclude></div>
+</div>
+

@@ -1,0 +1,5 @@
+{
+    "componentControllerRequire": ["component/ui/aab-tile/aab-tile.example", "component/ui/aab-tile/aab-tile"],
+    "componentControllerAngularDependencies": ["ui.aabTile"],
+    "componentControllerName": "aabTileController"
+}
