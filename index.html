@@ -7,13 +7,19 @@
     <title>Backup Triple A</title>
     <meta name="description" content="List of all the Java applications of ABN AMRO Investment domain">
     <link rel="stylesheet" href="./generic/liwid/styles/css/core2.css" media="screen">
-    <link rel="stylesheet" href="./generic/liwid/styles/css/liwid.css" media="screen">
+    <link rel="stylesheet" href="./generic/liwid/style/css/liwid.css" media="screen">
+    <link rel="stylesheet" href="./app/style/app.css" media="screen">
     <link rel="shortcut icon" href="./generic/liwid/styles/imgs/favicon.ico">
     <script type="text/javascript" src="./generic/lib/jquery/require/require-jquery.js"
             data-main="./app/scripts/core.js">
     </script>
 
     <title></title>
+     <script type="text/javascript">
+        require(['../../generic/lib/oca-directive/init-menu']);
+    </script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" 
+    data-requiremodule="lib/oca-directive/tsg-header" src="generic/lib/oca-directive/tsg-header.js"></script>
 
 </head>
 
@@ -21,7 +27,61 @@
 
 <!-- ngInclude: 'templates/header.html' -->
 
-<aab-header></aab-header>
+<!--<aab-header></aab-header> -->
+
+<header id="header"><!-- start abn amro header -->
+    <div class="container-fluid-nomax ocf-header">
+
+        <div print-remove class="container-fluid" style="padding-bottom:4px;">
+            <span class="ocf-brand ocf-cutout">
+            </span>
+            <div class="ocf-header-right">
+                <div class="btn-group hidden-xs hidden-xxs" data-dropdown data-dropdown-toggle>
+                    <select class="btn btn-link ocf-dropdown btn-smallest-width" ng-model="headerCtrl.selectedLanguage"
+                            ng-change="headerCtrl.changeLanguage()" on-click="changeTab()">
+                        <option value="nl" translate>LABEL_LANG_NL</option>
+                        <option value="en" translate>LABEL_LANG_EN</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- begin navigation -->
+        <div class="navbar-container">
+
+            <!-- begin navigation -->
+            <nav class="navbar navbar-default navbar-main">
+
+                <!-- The actual items -->
+                <ul class="nav navbar-nav">
+                    <li id="nav1"  class="primary-nav-heading alignn nav1">
+                        <a ui-sref="modelportfolio"  translate>Model Portfolio</a>
+                    </li>
+                    <li id="nav2" class="primary-nav-heading">
+                        <a  ui-sref="vmc"  translate>VMC Overview</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- end navigation -->
+            <div class="navbar-hamburger">
+                <button type="button" class="btn-nav-expander hidden-lg hidden-md">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="small">Menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- end abn amro header -->
+    </div>
+</header>
+<div class="ocf-curtain hidden-lg hidden-md"></div>
+
+
+
+<!-- header ends -->
+
 <div id="main" class="container-fluid" role="main">
     <div class="ng-scope">
         <div class="row">

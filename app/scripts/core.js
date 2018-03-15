@@ -3,6 +3,8 @@
         {
             baseUrl: './app/scripts',
             paths: {
+                'jquery'  : '../../generic/lib/jquery/1.12.3/jquery',
+                'jquery-ui'  : '../../generic/lib/jquery/ui/1.10.2/jquery-ui',
                 'angular': 'https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular',
                 'angularAMD': '../../generic/lib/angular/AMD/angularAMD.min',
                 'ui-router': '../../generic/lib/angular/ui-router/angular-ui-router',
@@ -17,8 +19,11 @@
                 'aab-tile': '../../generic/liwid/scripts/liwid-directives/aab-tile/aab-tile',
             },
             shim: {
+                'jquery': { 'deps' : [],  init: function () { return $; } },
+                'jquery-ui': {'export' : "$", 'deps' : ['jquery']},
+                
                 'angular': {
-                    'exports': 'angular'
+                    'exports': 'angular', 'deps': ['jquery']
                 },
                 'angularAMD':
                     {

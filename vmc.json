@@ -8,7 +8,13 @@
       "serviceConcept":"",
       "percChange":0,
       "calculated":0,
-      "activationTimeStamp":""
+      "activationTimeStamp":"",
+      "fondscode":"test FC1",
+      "isin" : "1234",
+      "company" :"Google Play",
+      "businessContactNumber" : "123456",
+      "cin" : "8765",
+      "status" : "open"
     },
     {
       "cin":"ABCD",
@@ -18,7 +24,13 @@
       "serviceConcept":"",
       "percChange":0,
       "calculated":0,
-      "activationTimeStamp":""
+      "activationTimeStamp":"",
+      "fondscode":"test FC2",
+      "isin" : "2345",
+      "company" :"Apple",
+      "businessContactNumber" : "87675642",
+      "cin" : "8765",
+      "status" : "open"
     },
     {
       "cin":"ABCD",
@@ -28,7 +40,13 @@
       "serviceConcept":"",
       "percChange":0,
       "calculated":0,
-      "activationTimeStamp":""
+      "activationTimeStamp":"",
+      "fondscode":"test FC3",
+      "isin" : "5678",
+      "company" :"Netfix",
+      "businessContactNumber" : "876537863",
+      "cin" : "98643",
+      "status" : "open"
     }
   ]
 }

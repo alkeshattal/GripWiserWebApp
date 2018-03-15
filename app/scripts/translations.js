@@ -157,7 +157,13 @@ define(['gettext', 'angular-locale_nl'], function () {
                 "LABEL_PAGE_RANGE": "pagina ",
                 "LABEL_PAGE_RESULTS": "Resultaten per page",
                 "LABEL_PAGE_PREVIOUS": "Vorige",
-                "LABEL_PAGE_NEXT": "volgende"
+                "LABEL_PAGE_NEXT": "volgende",
+
+                "LABEL_SECURITIES_ACCOUNT" :"Securities Account",
+                "LABEL_BC_NUMBER" : "BC nummer",
+                "LABEL_OTHER_USERS" : "Other Users",
+                "LABEL_SEARCH" : "Search",
+                "LABEL_CIN" : "CIN"
             });
         });
         $http.get('/en/widgetcontent/medewerkerapplicaties/ths/ths.json').then(function (data) {
@@ -315,7 +321,13 @@ define(['gettext', 'angular-locale_nl'], function () {
                 "LABEL_PAGE_RANGE": "Page",
                 "LABEL_PAGE_RESULTS": "Results per page",
                 "LABEL_PAGE_PREVIOUS": "previous",
-                "LABEL_PAGE_NEXT": "next"
+                "LABEL_PAGE_NEXT": "next",
+
+                "LABEL_SECURITIES_ACCOUNT" :"Securities Account",
+                "LABEL_BC_NUMBER" : "BC nummer",
+                "LABEL_OTHER_USERS" : "Other Users",
+                "LABEL_SEARCH" : "Search",
+                "LABEL_CIN" : "CIN"
             });
         });
     }]);

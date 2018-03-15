@@ -1,14 +1,23 @@
 <div class="ocf-tile ocf-tile-interactive">
-    <div class="col-sm-4">
-        <input type="checkbox" class="checkbox" name="selectAllVmc" ng-model="selectAllVmc">
-        <h3 style="margin-bottom:0">{{vmc.cin}}</h3>
-        <div class="data">{{details.company}}</div>
-    </div>
-    <div class="col-sm-8 form-group form-group-first" ng-class="{'has-warning has-feedback' : searchform.fondscode.$error.pattern || searchform.fondscode.$error.maxlength}">
-        <div class="col-sm-3"><span translate>LABEL_FONDSCODE</span></div>
-        <div class="col-sm-9">{{details.fondscode}}</div>
+        <input type="checkbox" class="checkbox col-sm-1" data-key-id="{{vmc.businessContactNumber}}" name="selectAllVmc" ng-model="selectAllVmc">
+        <h3 style="margin-bottom:0">{{vmc.cin}} - {{vmc.company}}</h3>
+    <div class="col-sm-8 col-offset-sm-1 form-group form-group-first">
+        <div class="col-sm-3 data-header"><span translate>LABEL_FONDSCODE</span></div>
+        <div class="col-sm-3">{{vmc.fondscode}}</div>
 
-        <div class="col-sm-3"><span translate>LABEL_ISIN</span></div>
-        <div class="col-sm-9">{{details.isin}}</div>
+        <div class="col-sm-3 data-header"><span translate>LABEL_BC_NUMBER</span></div>
+        <div class="col-sm-3">{{vmc.businessContactNumber}}</div>
+
+        <div class="col-sm-3 data-header"><span translate>LABEL_ISIN</span></div>
+        <div class="col-sm-3">{{vmc.isin}}</div>
+
+
+        <div class="col-sm-3 data-header"><span translate>LABEL_CIN</span></div>
+        <div class="col-sm-3">{{vmc.cin}}</div>
     </div>
+    <div class="col-sm-3" ng-if="vmc.status == 'blocked' || vmc.status == 'deleted'">
+        <img ng-if="vmc.status == 'blocked'" ng-src='app/images/blocked.jpg' />
+        <img ng-if="vmc.status == 'deleted'" ng-src='app/images/deletedpng.png' />
+    </div>
+
 </div>
