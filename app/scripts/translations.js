@@ -8,8 +8,8 @@ define(['gettext', 'angular-locale_nl'], function () {
                 "LABEL_SELECTEREN_1": "Transactie-gegevens/-kenmerken",
                 "LABEL_SELECTEREN_2": "Transactie-ID/-Referentie",
                 "LABEL_SCREEN_NAME": "Raadplegen effectentransacties",
-                "LABEL_OVERVIEW_SCREEN_NAME": "Raadplegen effectentransacties",
-                "LABEL_DETAIL_SCREEN_NAME": "Raadplegen effectentransacties",
+                "LABEL_OVERVIEW_SCREEN_NAME": "Model Portfolio Overview",
+                "LABEL_DETAIL_SCREEN_NAME": "VMC Overview",
                 "LABEL_EVENT_DETAIL_SCREEN_NAME": "Raadplegen effectentransacties",
 
                 "LABEL_RISK_PROFILE_01" : "Very Defensive",
@@ -173,8 +173,8 @@ define(['gettext', 'angular-locale_nl'], function () {
                 "LABEL_SELECTEREN_1": "Transactie-gegevens/-kenmerken",
                 "LABEL_SELECTEREN_2": "Transactie-ID/-Referentie",
                 "LABEL_SCREEN_NAME": "Browse securities transactions",
-                "LABEL_OVERVIEW_SCREEN_NAME": "Browse securities transactions",
-                "LABEL_DETAIL_SCREEN_NAME": "Browse securities transactions",
+                "LABEL_OVERVIEW_SCREEN_NAME": "Model Portfolio Overview",
+                "LABEL_DETAIL_SCREEN_NAME": "VMC Overview",
                 "LABEL_EVENT_DETAIL_SCREEN_NAME": "Raadplegen effectentransacties",
 
                 "LABEL_RISK_PROFILE_01" : "Very Defensive",

@@ -1,7 +1,6 @@
 {
   "vmcList":[
     {
-      "cin":"ABCD",
       "bcNumber":"1",
       "status":"Active",
       "riskProfile":"Aggressive",
@@ -11,13 +10,12 @@
       "activationTimeStamp":"",
       "fondscode":"test FC1",
       "isin" : "1234",
-      "company" :"Google Play",
+      "company" :"Income Mandate",
       "businessContactNumber" : "123456",
       "cin" : "8765",
       "status" : "open"
     },
     {
-      "cin":"ABCD",
       "bcNumber":"1",
       "status":"Active",
       "riskProfile":"Aggressive",
@@ -27,23 +25,22 @@
       "activationTimeStamp":"",
       "fondscode":"test FC2",
       "isin" : "2345",
-      "company" :"Apple",
+      "company" :"Income Mandate",
       "businessContactNumber" : "87675642",
       "cin" : "8765",
       "status" : "open"
     },
     {
-      "cin":"ABCD",
       "bcNumber":"1",
       "status":"Active",
-      "riskProfile":"Aggressive",
+      "riskProfile":"Defensive",
       "serviceConcept":"",
       "percChange":0,
       "calculated":0,
       "activationTimeStamp":"",
       "fondscode":"test FC3",
       "isin" : "5678",
-      "company" :"Netfix",
+      "company" :"Service Concept 3",
       "businessContactNumber" : "876537863",
       "cin" : "98643",
       "status" : "open"

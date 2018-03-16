@@ -1,6 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h2 class="panel-title"><span data-translate>LABEL_OVERVIEW_SCREEN_NAME</span></h2>
+        <h2 class="panel-title"><span data-translate>LABEL_DETAIL_SCREEN_NAME</span></h2>
     </div>
     <div class="panel-body" id="screen-body" data-ng-cloak>
         <div id="http-error-block"></div>
@@ -35,16 +35,16 @@
             </form>
         </div>
         <div class="col-sm-12">
-            <legend style="margin-left: 0;width: 100%;"><span translate>LABEL_OTHER_USERS</span></legend>
+            <legend style="margin-left: 0;width: 100%;"><span translate>VMC Details</span></legend>
             <div>
                 <div class="ocf-tile">
                     <input type="checkbox" class="checkbox col-md-1" name="selectAllVmc" ng-model="selectAllVmc">
                     <h3 for="selectAllVmc" class="col-sm-6">Select All VMC</h3>
                     <div class="col-sm-2">
-                        <span class="glyphicon ocf-icon-rejected block-entry" ng-click="updateSelectedVmc($event)"></span>
+                        <span class="glyphicon ocf-icon-rejected block-entry" ng-click="updateSelectedVmc($event)" title="hold"></span>
                     </div>
                     <div class="col-md-2">
-                        <span class="glyphicon glyphicon-trash delete-entry" ng-click="updateSelectedVmc($event)"></span>
+                        <span class="glyphicon glyphicon-trash delete-entry" ng-click="updateSelectedVmc($event)" title="remove"></span>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@
   "modelportfolio": [
     {
       "name": "Income Mandate",
-      "servicecnceptId": 1234,
+      "servicecnceptId": "1987",
       "selectionDate": "31-10-2017",
       "assetClasses": [
         {
@@ -86,8 +86,8 @@
       ]
     },
     {
-      "name": "Income Mandate2",
-      "servicecnceptId": 5678,
+      "name": "Concept2",
+      "servicecnceptId": "9046",
       "selectionDate": "31-10-2017",
 
       "assetClasses": [
