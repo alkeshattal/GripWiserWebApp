@@ -2,8 +2,8 @@
     /**
      *
      */
-    define(['angular','ui.bootstrap','aab-accordian'], function () {
-        angular.module('modelPortfolio', []).controller('modelPortfolioController', modelPortfolioController);
+    define(['angular','ui.bootstrap','aab-accordian','liwid-modules','amount-formatter'], function () {
+        angular.module('modelPortfolio', ['LiWidFilters']).controller('modelPortfolioController', modelPortfolioController);
 
         function modelPortfolioController($scope, GetModelPortfolio) {
 

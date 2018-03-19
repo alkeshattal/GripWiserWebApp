@@ -1,49 +1,52 @@
 {
   "vmcList":[
     {
+      "cin" : "1308608425",
       "bcNumber":"1",
-      "status":"Active",
-      "riskProfile":"Aggressive",
-      "serviceConcept":"",
-      "percChange":0,
+      "status":"Approved",
+      "riskProfile":"Balanced Bonds",
+      "riskProfileId":"III",
+      "serviceConcept":"VERM",
+      "marketValue":301264.83,
+      "percChange":5.9,
       "calculated":0,
       "activationTimeStamp":"",
-      "fondscode":"test FC1",
-      "isin" : "1234",
-      "company" :"Income Mandate",
+      "modelPortfolio" :"Income Mandate",
       "businessContactNumber" : "123456",
-      "cin" : "8765",
-      "status" : "open"
+
+      "beheerStatus" : "In Beheer"
     },
     {
+      "cin" : "1220404408",
       "bcNumber":"1",
-      "status":"Active",
-      "riskProfile":"Aggressive",
-      "serviceConcept":"",
-      "percChange":0,
+      "status":"Initial",
+      "riskProfile":"Growth",
+      "riskProfileId":"V",
+      "serviceConcept":"VMMA",
+      "marketValue":6781832.39,
+      "percChange":158.7,
       "calculated":0,
       "activationTimeStamp":"",
-      "fondscode":"test FC2",
-      "isin" : "2345",
-      "company" :"Income Mandate",
+      "modelPortfolio" :"SRI Funds",
       "businessContactNumber" : "87675642",
-      "cin" : "8765",
-      "status" : "open"
+
+      "beheerStatus" : "Under Construction"
     },
     {
+      "cin" : "1150905605",
       "bcNumber":"1",
-      "status":"Active",
-      "riskProfile":"Defensive",
-      "serviceConcept":"",
-      "percChange":0,
+      "status":"Suspense",
+      "riskProfile":"Conservative",
+      "riskProfileId":"II",
+      "serviceConcept":"VDBA",
+      "marketValue":794355.54,
+      "percChange":18.1,
       "calculated":0,
       "activationTimeStamp":"",
-      "fondscode":"test FC3",
-      "isin" : "5678",
-      "company" :"Service Concept 3",
+      "modelPortfolio" :"Special Mandates",
       "businessContactNumber" : "876537863",
-      "cin" : "98643",
-      "status" : "open"
+
+      "beheerStatus" : "On Hold Exit"
     }
   ]
 }
