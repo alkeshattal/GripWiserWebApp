@@ -7,7 +7,9 @@
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000 -c-1"
   },
-  "author": "Arani",
+  "author": "Alkesh Attal",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "angular-chart.js": "^1.1.1"
+  }
 }

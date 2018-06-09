@@ -16,10 +16,18 @@
                 controller : 'homeController'
             });
 
+            var splash = angularAMD.route({
+                url: '/splash',
+                templateUrl : 'app/modules/splash/splash.html',
+                controllerUrl : 'app/modules/splash/splash.js',
+                controller : 'splashController'
+            });
+
             $stateProvider.state('home',home);
             $stateProvider.state('goals',goals);
+            $stateProvider.state('splash',splash);
 
-            $urlRouterProvider.otherwise('/home');
+            $urlRouterProvider.otherwise('/splash');
         }
         config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
