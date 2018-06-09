@@ -1,5 +1,5 @@
 'use strict';
-define(['gettext', 'angular-locale_nl'], function () {
+define(['gettext'], function () {
     angular.module("gettext").run(['gettextCatalog', '$http', function (gettextCatalog, $http) {
         $http.get('/nl/widgetcontent/medewerkerapplicaties/ths/ths.json').then(function (data) {
             gettextCatalog.setStrings('nl', data);

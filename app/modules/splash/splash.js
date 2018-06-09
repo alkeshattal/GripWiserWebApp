@@ -7,7 +7,7 @@
 
         function splashController($scope, $state) {
             console.log("in splash");
-            $scope.gotoHome = function () {
+            $scope.gotoLogin = function () {
                 console.log("in splash to home");
                 $state.go('home');
             };

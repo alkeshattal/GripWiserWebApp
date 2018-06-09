@@ -1,0 +1,41 @@
+<div class="panel panel-default" style="height:100%">
+    <div class="panel-heading">
+        <img src="../../app/images/Logo_Header.png" height="80%">
+    </div>
+    <div class="panel-body" id="screen-body" data-ng-cloak>
+        <div data-ng-controller="pin5Controller as pin5Controller">
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend data-testid="legend-pin5-value">Entered Pin: [{{pin5Controller.pin5}}]</legend>
+                    <aab-form-group
+                            data-testkey="div-container-pin5"
+                            data-label="Custom label"
+                            data-sub-label="small text">
+                        <aab-pin5-input data-ng-model="pin5Controller.pin5" data-minlength="5"></aab-pin5-input>
+                        <aab-form-feedback
+                                data-minlength-error="Voer minimaal 5 tekens in."
+                                data-required-error="Dit veld is verplicht.">
+                        </aab-form-feedback>
+                    </aab-form-group>
+                    <aab-form-group data-label="number" data-sub-label="maxlength 2, required, small">
+                        <aab-input data-type="number"
+                                   data-model="pin5Controller.model"
+                                   data-testkey="numberSmall"
+                                   data-placeholder="12"
+                                   data-size="small"
+                                   data-maxlength="2"
+                                   data-required="true">
+                        </aab-input>
+                        <aab-form-feedback data-required-error="Dit veld is verplicht."></aab-form-feedback>
+                    </aab-form-group>
+                </fieldset>
+                <aab-button
+                        data-attention-type="primary"
+                        data-label="Submit"
+                        data-submit="true"
+                        data-testid="form-submit-button">
+                </aab-button>
+            </form>
+        </div>
+    </div>
+</div>

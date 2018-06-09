@@ -23,9 +23,17 @@
                 controller : 'splashController'
             });
 
+            var login = angularAMD.route({
+                url: '/login',
+                templateUrl : 'app/modules/login/login.html',
+                controllerUrl : 'app/modules/login/login.js',
+                controller : 'loginController'
+            });
+
             $stateProvider.state('home',home);
             $stateProvider.state('goals',goals);
             $stateProvider.state('splash',splash);
+            $stateProvider.state('login',login);
 
             $urlRouterProvider.otherwise('/splash');
         }
