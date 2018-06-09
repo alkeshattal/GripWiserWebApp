@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     var requiredJS = ['angularAMD', 'route', 'ui-router', 'angular-resource', 'gettext', 'translations', 'ui.bootstrap', 'aab-accordian',
-        '../../app/modules/home/home', '../../app/modules/home/home.service','aab-toggle-tile'
+        '../../app/modules/home/home', '../../app/modules/home/home.service'
     ];
 
     define('app', requiredJS, function (angularAMD, route) {

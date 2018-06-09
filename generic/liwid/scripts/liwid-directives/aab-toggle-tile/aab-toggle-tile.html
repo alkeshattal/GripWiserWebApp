@@ -1,46 +1,19 @@
-<div data-ng-controller="aabToggleTileController as aabToggleTileController">
-    <aab-toggle-tile
-            data-testid="aab-toggle-tile-1"
-            data-is-collapsed="aabToggleTileController.toggleFoldout"
-            data-value="aabToggleTileController.toggleValue1"
-            data-value-label-true="zichtbaar voor uw kind"
-            data-value-label-false="niet zichtbaar voor uw kind"
-            data-tile-title="Internet Bankieren"
-            data-tile-description="Wilt u uw kind toegang geven tot internet bankieren?"
-            data-tile-icon="ocf-image-tasklist"
-            data-tile-has-foldout="true"
-            data-action="aabToggleTileController.testFunc('toggle')"
-            data-tile-is-connected="true"
-            data-tile-id="0">
-        <aab-form-group data-label="Generic-firstNameLabel">
-            <aab-input model="firstName" data-ng-model="firstName" required="true" type="alphanumeric" placeholder="input-firstName" maxlength="20"></aab-input>
-        </aab-form-group>
-    </aab-toggle-tile>
-    <aab-toggle-tile
-            data-testid="aab-toggle-tile-2"
-            data-is-collapsed="true"
-            data-value="aabToggleTileController.toggleValue2"
-            data-value-label-true="zichtbaar voor uw kind"
-            data-value-label-false="niet zichtbaar voor uw kind"
-            data-tile-title="Internet Bankieren"
-            data-tile-description="Wilt u uw kind toegang geven tot internet bankieren?"
-            data-tile-icon="ocf-image-tasklist"
-            data-tile-has-foldout="false"
-            data-tile-is-connected="true"
-            data-tile-id="1"
-            data-hide-toggle="true">
-    </aab-toggle-tile>
-    <aab-toggle-tile
-            data-testid="aab-toggle-tile-last"
-            data-value="aabToggleTileController.toggleValue3"
-            data-value-label-true="zichtbaar voor uw kind"
-            data-value-label-false="niet zichtbaar voor uw kind"
-            data-tile-title="Internet Bankieren"
-            data-tile-description="Wilt u uw kind toegang geven tot internet bankieren?"
-            data-tile-icon="ocf-image-tasklist"
-            data-tile-has-foldout="false"
-            data-tile-is-connected="true"
-            data-tile-id="2"
-            data-hide-toggle="false">
-    </aab-toggle-tile>
+<div class="ocf-tile-toggle-wrapper" data-ng-class="{ 'ocf-tile-toggle-disconnected' : !tileIsConnected }" >
+    <div class="ocf-tile ocf-tile-toggle" data-ng-class="{ 'ocf-tile-toggle-fieldset-hidden' : tileHasFoldout && isCollapsed }" id="ocf-tile-toggle-{{$id}}">
+        <div class="col-sm-6 ocf-tile-toggle-col-left">
+            <div class="glyphicon {{tileIcon}}"></div>
+            <h5>{{tileTitle}}</h5>
+            <legend for="toggleTileCheckbox">{{tileDescription}}</legend>
+        </div>
+        <div class="col-sm-6 ocf-tile-toggle-col-right">
+            <span data-ng-class="{ 'ocf-checkbox-label-without-toggle' : (hideToggle === 'true' || hideToggle === true), 'ocf-checkbox-label' : (!hideToggle || hideToggle === 'false' || hideToggle === false) }">{{selectedValueLabel}}</span>
+            <div data-ng-hide="hideToggle" class="ocf-checkbox-toggle">
+                <input type="checkbox" data-ng-model="value" name="toggleTileCheckbox{{tileId}}" value="value" id="toggleTileCheckbox{{tileId}}" checked="value" data-ng-change="action()">
+                <label for="toggleTileCheckbox{{tileId}}">
+                    <span class="sr-only"> {{selectedValueLabel}} </span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <fieldset class="form-horizontal" data-uib-collapse="isCollapsed" data-ng-if="tileHasFoldout" data-ng-transclude></fieldset>
 </div>
