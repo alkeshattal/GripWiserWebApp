@@ -16,10 +16,10 @@
                 'ui.bootstrap': '../../generic/lib/angular/ui-bootstrap/2.5.0/ui-bootstrap-tpls-2.5.0',
                 'aab-accordian': '../../generic/liwid/scripts/liwid-directives/aab-accordion-two/aab-accordion-two',
                 'aab-tile': '../../generic/liwid/scripts/liwid-directives/aab-tile/aab-tile',
-                'aab-tile': '../../generic/liwid/scripts/liwid-directives/aab-tile/aab-tile',
+                'aab-toggle-tile': '../../generic/liwid/scripts/liwid-directives/aab-toggle-tile/aab-toggle-tile',
                 'liwid-modules' : '../../generic/liwid/scripts/liwid-modules',
                 'liwid-filters' : '../../generic/liwid/scripts/liwid-filters/filters',
-                'amount-formatter' : '../../generic/liwid/scripts/liwid-filters/amount-formatter'
+               'amount-formatter' : '../../generic/liwid/scripts/liwid-filters/amount-formatter'
             },
             shim: {
                 'jquery': { 'deps' : [],  init: function () { return $; } },
@@ -40,6 +40,7 @@
                 'angular-animate': {deps: ['angular']},
                 'ui.bootstrap': {deps: ['angular']},
                 'aab-accordian': {deps: ['ui.bootstrap']},
+                'aab-toggle-tile': {deps: ['angular']},
                 'liwid-modules' : { deps : ['angular', 'gettext'] },
                 'liwid-filters' : { deps : ['angular', 'liwid-modules'] },
                 'amount-formatter' : { deps : ['angular', 'liwid-modules'] }

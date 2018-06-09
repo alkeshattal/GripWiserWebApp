@@ -1,13 +1,12 @@
 (function () {
     'use strict';
-    var requiredJS = ['angularAMD', 'route', 'ui-router', 'angular-resource', 'gettext', 'translations', 'ui.bootstrap','aab-accordian',
-        '../../app/modules/header/header.directive', '../../app/modules/model-portfolio/model-portfolio', '../../app/modules/model-portfolio/model-portfolio.service',
-        '../../app/modules/vmc-overview/vmc-overview', '../../app/modules/vmc-overview/vmc-overview.service'
+    var requiredJS = ['angularAMD', 'route', 'ui-router', 'angular-resource', 'gettext', 'translations', 'ui.bootstrap', 'aab-accordian',
+        '../../app/modules/home/home', '../../app/modules/home/home.service','aab-toggle-tile'
     ];
 
     define('app', requiredJS, function (angularAMD, route) {
 
-        var app = angular.module("tripleABackupApp", ['ui.router', 'ngResource', 'gettext', 'ui.bootstrap', 'modelPortfolio','vmcOverview','ui.aabAccordionTwo']);
+        var app = angular.module("GripWiserApp", ['ui.router', 'ngResource', 'gettext', 'ui.bootstrap', 'home', 'ui.aabAccordionTwo']);
 
         app.config(route);
 

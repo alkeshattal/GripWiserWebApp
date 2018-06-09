@@ -15,7 +15,7 @@
     </script>
 
     <title></title>
-     <script type="text/javascript">
+   <script type="text/javascript">
         require(['../../generic/lib/oca-directive/init-menu']);
     </script>
     <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" 
@@ -29,10 +29,10 @@
 
 <!--<aab-header></aab-header> -->
 
-<header id="header"><!-- start abn amro header -->
-    <div class="container-fluid-nomax ocf-header">
+<header id="header" class="hidden-xs hidden-xxs"><!-- start abn amro header -->
+    <div class="container-fluid-nomax ocf-header ">
 
-        <div print-remove class="container-fluid" style="padding-bottom:4px;">
+        <div print-remove class="btn-group hidden-xs hidden-xxs"  class="container-fluid" style="padding-bottom:4px;">
             <span class="ocf-brand ocf-cutout">
             </span>
             <div class="ocf-header-right">
@@ -46,34 +46,6 @@
             </div>
         </div>
 
-        <!-- begin navigation -->
-        <div class="navbar-container">
-
-            <!-- begin navigation -->
-            <nav class="navbar navbar-default navbar-main">
-
-                <!-- The actual items -->
-                <ul class="nav navbar-nav">
-                    <li id="nav1"  class="primary-nav-heading alignn nav1">
-                        <a ui-sref="modelportfolio"  translate>Model Portfolio</a>
-                    </li>
-                    <li id="nav2" class="primary-nav-heading">
-                        <a  ui-sref="vmc"  translate>VMC Overview</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- end navigation -->
-            <div class="navbar-hamburger">
-                <button type="button" class="btn-nav-expander hidden-lg hidden-md">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="small">Menu</span>
-                </button>
-            </div>
-        </div>
-        <!-- end abn amro header -->
     </div>
 </header>
 <div class="ocf-curtain hidden-lg hidden-md"></div>
@@ -87,7 +59,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
+                    <div class="">
                         <span us-spinner="{radius:30, width:8, length: 16}" spinner-key="spinner-1"></span>
                         <ui-view></ui-view>
                     </div>

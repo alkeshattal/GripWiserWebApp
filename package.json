@@ -1,0 +1,13 @@
+{
+  "name": "nglite",
+  "version": "1.0.0",
+  "description": "basic angular app for intranet applications",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1"
+  },
+  "author": "Arani",
+  "license": "ISC",
+  "dependencies": {}
+}

@@ -1,0 +1,46 @@
+<div data-ng-controller="aabToggleTileController as aabToggleTileController">
+    <aab-toggle-tile
+            data-testid="aab-toggle-tile-1"
+            data-is-collapsed="aabToggleTileController.toggleFoldout"
+            data-value="aabToggleTileController.toggleValue1"
+            data-value-label-true="zichtbaar voor uw kind"
+            data-value-label-false="niet zichtbaar voor uw kind"
+            data-tile-title="Internet Bankieren"
+            data-tile-description="Wilt u uw kind toegang geven tot internet bankieren?"
+            data-tile-icon="ocf-image-tasklist"
+            data-tile-has-foldout="true"
+            data-action="aabToggleTileController.testFunc('toggle')"
+            data-tile-is-connected="true"
+            data-tile-id="0">
+        <aab-form-group data-label="Generic-firstNameLabel">
+            <aab-input model="firstName" data-ng-model="firstName" required="true" type="alphanumeric" placeholder="input-firstName" maxlength="20"></aab-input>
+        </aab-form-group>
+    </aab-toggle-tile>
+    <aab-toggle-tile
+            data-testid="aab-toggle-tile-2"
+            data-is-collapsed="true"
+            data-value="aabToggleTileController.toggleValue2"
+            data-value-label-true="zichtbaar voor uw kind"
+            data-value-label-false="niet zichtbaar voor uw kind"
+            data-tile-title="Internet Bankieren"
+            data-tile-description="Wilt u uw kind toegang geven tot internet bankieren?"
+            data-tile-icon="ocf-image-tasklist"
+            data-tile-has-foldout="false"
+            data-tile-is-connected="true"
+            data-tile-id="1"
+            data-hide-toggle="true">
+    </aab-toggle-tile>
+    <aab-toggle-tile
+            data-testid="aab-toggle-tile-last"
+            data-value="aabToggleTileController.toggleValue3"
+            data-value-label-true="zichtbaar voor uw kind"
+            data-value-label-false="niet zichtbaar voor uw kind"
+            data-tile-title="Internet Bankieren"
+            data-tile-description="Wilt u uw kind toegang geven tot internet bankieren?"
+            data-tile-icon="ocf-image-tasklist"
+            data-tile-has-foldout="false"
+            data-tile-is-connected="true"
+            data-tile-id="2"
+            data-hide-toggle="false">
+    </aab-toggle-tile>
+</div>
